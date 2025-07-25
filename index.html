@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DnA Holding - Investing in Humanity's Future</title>
+    <meta name="description" content="DnA Holding: A family office dedicated to managing assets and investing in groundbreaking science and technology for the profound benefit of humanity.">
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧬</text></svg>">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: #004D40; /* Dark Teal */
+            --secondary-color: #388E3C; /* Dark Green */
+            --accent-color: #8BC34A; /* Light Green Accent */
+            --text-color: #333;
+            --light-text-color: #f4f4f4;
+            --background-light: #f9f9f9;
+            --background-dark: #212121;
+        }
+
+        body {
+            font-family: 'Inter Tight', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-light);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: var(--light-text-color);
+            padding: 1.5rem 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8em;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+        }
+
+        header p {
+            font-size: 1.2em;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+
+        nav {
+            background-color: var(--secondary-color);
+            padding: 0.8rem 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav a {
+            color: var(--light-text-color);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border-radius: 4px;
+        }
+
+        nav a:hover, nav a:focus {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            flex-grow: 1; /* Allows container to take up available space */
+        }
+
+        section {
+            background-color: #fff;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+        section h2 {
+            color: var(--primary-color);
+            font-size: 2em;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        section h2::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
+            border-radius: 2px;
+        }
+
+        .intro-text {
+            font-size: 1.1em;
+            color: var(--text-color);
+            max-width: 700px;
+            margin: 1.5rem auto 0;
+            line-height: 1.8;
+        }
+
+        .investment-areas {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 2rem;
+        }
+
+        .investment-item {
+            background-color: var(--background-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+            width: calc(33% - 20px); /* 3 items per row */
+            min-width: 280px; /* Minimum width for responsiveness */
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .investment-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .investment-item h3 {
+            color: var(--secondary-color);
+            margin-top: 0;
+            font-size: 1.4em;
+            font-weight: 500;
+        }
+
+        .asset-management-list {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+            margin-top: 1.5rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .asset-management-list li {
+            background-color: #f0f8f0; /* Light green background */
+            padding: 10px 15px;
+            border-left: 4px solid var(--accent-color);
+            border-radius: 4px;
+            font-weight: 400;
+            font-size: 0.95em;
+            color: #4CAF50; /* A matching green */
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: var(--light-text-color);
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: auto; /* Pushes footer to the bottom */
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            header p {
+                font-size: 1em;
+            }
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+            nav a {
+                padding: 0.5rem;
+            }
+            .container {
+                margin: 1.5rem auto;
+            }
+            section {
+                padding: 1.5rem;
+            }
+            .investment-item {
+                width: 100%; /* Stack items on small screens */
+            }
+            .asset-management-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>DnA Holding</h1>
+        <p>Strategic Capital for a Brighter Tomorrow</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#mission">Our Mission</a></li>
+            <li><a href="#investments">Impact Investments</a></li>
+            <li><a href="#assets">Asset Management</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="about">
+            <h2>About DnA Holding</h2>
+            <p class="intro-text">
+                DnA Holding is a discerning family office dedicated to the meticulous management and strategic growth of intergenerational wealth. Beyond conventional portfolio management, our core ethos is to leverage capital as a catalyst for positive global change.
+            </p>
+            <p class="intro-text">
+                We are committed to nurturing ventures that push the boundaries of human knowledge and capability, fostering a legacy of innovation and betterment for all.
+            </p>
+        </section>
+
+        <section id="mission">
+            <h2>Our Mission</h2>
+            <p class="intro-text">
+                To bridge the gap between financial stewardship and profound societal impact. DnA Holding invests with purpose, channeling resources into groundbreaking science and technology that directly addresses global challenges and enhances human well-being.
+            </p>
+            <p class="intro-text">
+                We seek to cultivate a future where prosperity is synonymous with progress, and where our investments yield both financial returns and transformative advancements for humanity.
+            </p>
+        </section>
+
+        <section id="investments">
+            <h2>Impact Investments: Advancing Science & Technology</h2>
+            <p class="intro-text">
+                Our venture capital arm specifically targets high-potential companies and research initiatives that are pioneering solutions in critical areas. We believe in the power of innovation to create a sustainable and thriving world.
+            </p>
+            <div class="investment-areas">
+                <div class="investment-item">
+                    <h3>Biotechnology & Healthcare</h3>
+                    <p>Investing in life sciences, novel therapeutics, diagnostics, and preventative health technologies to improve global health outcomes.</p>
+                </div>
+                <div class="investment-item">
+                    <h3>Sustainable Energy & Environment</h3>
+                    <p>Supporting renewable energy solutions, climate tech, sustainable agriculture, and technologies that protect our planet's ecosystems.</p>
+                </div>
+                <div class="investment-item">
+                    <h3>Artificial Intelligence & Robotics</h3>
+                    <p>Funding ethical AI development, advanced robotics, and automation that promise to enhance productivity and solve complex problems.</p>
+                </div>
+                <div class="investment-item">
+                    <h3>Advanced Materials & Nanotechnology</h3>
+                    <p>Exploring breakthroughs in materials science and nanotechnology that can revolutionize various industries, from manufacturing to medicine.</p>
+                </div>
+                <div class="investment-item">
+                    <h3>Space & Exploration</h3>
+                    <p>Backing ventures in space technology, satellite applications, and the exploration of new frontiers for scientific discovery and resource management.</p>
+                </div>
+                <div class="investment-item">
+                    <h3>Education & Human Capital Tech</h3>
+                    <p>Empowering platforms and tools that democratize access to quality education and foster human potential globally.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="assets">
+            <h2>Comprehensive Asset Management</h2>
+            <p class="intro-text">
+                Beyond our impact investments, DnA Holding provides sophisticated management of the family's diverse portfolio, ensuring financial stability and long-term growth across various asset classes.
+            </p>
+            <ul class="asset-management-list">
+                <li>Real Estate Portfolios</li>
+                <li>Digital Assets & Cryptocurrencies</li>
+                <li>Public Equities & Fixed Income</li>
+                <li>Private Equity & Venture Capital</li>
+                <li>Hedge Funds</li>
+                <li>Art & Collectibles</li>
+                <li>Commodities</li>
+                <li>Succession Planning & Philanthropy</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p class="intro-text">
+                DnA Holding operates with discretion and a long-term vision. We engage with select partners and ventures that align with our mission.
+            </p>
+            <p class="intro-text">
+                For inquiries related to partnerships or investment opportunities, please reach out via secured channels.
+            </p>
+            <p style="font-size: 1.1em; font-weight: 500;">Email: <a href="mailto:contact@dnaholding.org" style="color: var(--secondary-color); text-decoration: none;">contact@dnaholding.org</a></p>
+        </section>
+    </div>
+
+    <footer>
+        <p>DnA Holding. Leveraging Wealth for Global Progress.</p>
+    </footer>
+</body>
+</html>
