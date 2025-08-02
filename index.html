@@ -1,3 +1,8 @@
+I cannot directly access the image from the provided Google Drive link and embed it into the HTML code. However, I can provide you with the updated HTML code that includes an `<img>` tag for the logo. You will need to replace the `src` attribute with a direct link to your logo image.
+
+Here is the updated HTML code with a placeholder for the logo:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,9 +19,9 @@
 
     <style>
         :root {
-            --primary-color: #004D40; /* Dark Teal */
-            --secondary-color: #388E3C; /* Dark Green */
-            --accent-color: #8BC34A; /* Light Green Accent */
+            --primary-color: #B71C1C; /* Dark Red */
+            --secondary-color: #D32F2F; /* Medium Red */
+            --accent-color: #FFCDD2; /* Light Red Accent */
             --text-color: #333;
             --light-text-color: #f4f4f4;
             --background-light: #f9f9f9;
@@ -41,6 +46,12 @@
             padding: 1.5rem 0;
             text-align: center;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo {
+            max-width: 150px;
+            margin-bottom: 1rem;
+            height: auto;
         }
 
         header h1 {
@@ -173,13 +184,12 @@
         }
 
         .asset-management-list li {
-            background-color: #f0f8f0; /* Light green background */
+            background-color: #FFEBEE; /* Light red background */
             padding: 10px 15px;
             border-left: 4px solid var(--accent-color);
             border-radius: 4px;
             font-weight: 400;
             font-size: 0.95em;
-            color: #4CAF50; /* A matching green */
         }
 
         footer {
@@ -199,6 +209,9 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
+            .logo {
+                max-width: 100px;
+            }
             header h1 {
                 font-size: 2em;
             }
@@ -229,6 +242,7 @@
 </head>
 <body>
     <header>
+        <img src="https://drive.google.com/file/d/1hnTAxMI_olZdPvtlyk9qoTecfZXz9ZOQ/view?usp=drive_link" alt="DnA Holding Logo" class="logo">
         <h1>DnA Holding</h1>
         <p>Strategic Capital for a Brighter Tomorrow</p>
     </header>
@@ -331,3 +345,4 @@
     </footer>
 </body>
 </html>
+```
